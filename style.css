@@ -1,0 +1,325 @@
+/* ==============================
+   1. ТҮСТӨР ЖАНА ЖАЛПЫ ЖӨНДӨӨЛӨР
+================================ */
+:root {
+    --bg: #fbf5ea;
+    --card: #ffffff;
+    --ink: #2b1d14;
+    --mut: #7a6656;
+    --acc: #c8501e;
+    --acc2: #e8a33d;
+    --line: #ecdfca;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #1c1511;
+        --card: #2a1f18;
+        --ink: #f5e9d8;
+        --mut: #b9a58f;
+        --acc: #e8693a;
+        --acc2: #e8a33d;
+        --line: #3d2d22;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 16px;
+    color: var(--acc);
+    font-size: 26px;
+}
+
+section {
+    padding: 34px 0;
+}
+
+.w {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 18px;
+}
+
+/* ==============================
+   2. БАСКЫЧТАР
+================================ */
+.cta,
+.add,
+.cartbtn {
+    border: 0;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    font-weight: 700;
+}
+
+.cta {
+    display: inline-block;
+    padding: 13px 28px;
+    border-radius: 26px;
+    background: var(--acc);
+    color: #ffffff;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+/* ==============================
+   3. ЖОГОРКУ БӨЛҮК (HEADER)
+================================ */
+header {
+    padding: 14px 0;
+    background: var(--acc);
+    color: #ffffff;
+}
+
+header .w {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.cartbtn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #ffffff;
+    color: var(--acc);
+}
+
+/* ==============================
+   4. БАШКЫ БӨЛҮК (HERO)
+================================ */
+.hero {
+    padding: 48px 0 36px;
+    background: linear-gradient(var(--bg), var(--line));
+    text-align: center;
+}
+
+.hero .big {
+    font-size: 64px;
+}
+
+.hero h1 {
+    margin: 6px 0;
+    font-size: clamp(30px, 7vw, 48px);
+}
+
+.hero p {
+    max-width: 480px;
+    margin: 0 auto 18px;
+    color: var(--mut);
+}
+
+/* ==============================
+   5. МЕНЮ
+================================ */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.tab {
+    padding: 7px 16px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: var(--card);
+    color: var(--ink);
+    cursor: pointer;
+    font-family: Georgia, serif;
+    font-size: 15px;
+}
+
+.tab.on {
+    border-color: var(--acc2);
+    background: var(--acc2);
+    color: #2b1d14;
+    font-weight: 700;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 14px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--card);
+}
+
+.card .e {
+    font-size: 38px;
+}
+
+.card .p {
+    color: var(--acc);
+    font-weight: 700;
+}
+
+.card small {
+    color: var(--mut);
+}
+
+.add {
+    margin-top: auto;
+    padding: 9px;
+    border-radius: 10px;
+    background: var(--acc);
+    color: #ffffff;
+}
+
+/* ==============================
+   6. ЗАКАЗ ЖАНА СЕБЕТ
+================================ */
+.panel {
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--card);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--line);
+}
+
+.q button {
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--bg);
+    color: var(--ink);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tot {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: right;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin: 5px 0 12px;
+    padding: 11px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
+
+label {
+    color: var(--mut);
+    font-size: 14px;
+}
+
+.pay {
+    text-align: center;
+}
+
+.pay small {
+    color: var(--mut);
+}
+
+.qr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 2px dashed var(--acc);
+    border-radius: 12px;
+    color: var(--mut);
+    font-size: 13px;
+    text-align: center;
+}
+
+.err {
+    margin: 10px 0 0;
+    color: var(--acc);
+}
+
+.ok {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+
+.ok .icon {
+    font-size: 48px;
+}
+
+/* ==============================
+   7. ТӨМӨНКҮ БӨЛҮК (FOOTER)
+================================ */
+footer {
+    padding: 22px 0;
+    background: var(--ink);
+    color: var(--bg);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ==============================
+   8. ТЕЛЕФОН ҮЧҮН ЫҢГАЙЛАШТЫРУУ
+================================ */
+@media (max-width: 520px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    .cartbtn {
+        padding: 7px 11px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 36px 0 28px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

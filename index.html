@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Шорпо Борбору</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="text/css" href="icon.png">
+</head>
+<body>
+
+<header>
+  <div class="w">
+    <div class="logo">🍲 Шорпо Борбору</div>
+    <button class="cartbtn" onclick="location.hash='order'">Себет: <span id="cnt">0</span></button>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="w">
+    <div class="big">🍲</div>
+    <h1>Ысык, даамдуу шорпо</h1>
+    <p>Тоок, индюк, мал жана кой шорпосу. Үйгө чейин жеткиребиз.</p>
+    <a class="cta" href="#menu">Менюну көрүү</a>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="w">
+    <h2>Меню</h2>
+    <div class="tabs" id="tabs"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="w">
+    <h2>Заказ берүү</h2>
+    <div class="panel">
+      <div id="form">
+        <div id="lines"></div>
+        <div class="tot">Жалпы: <span id="sum">0</span> сом</div>
+
+        <label>Атыңыз</label>
+        <input id="name" placeholder="Аты-жөнү">
+        <label>Телефон номер</label>
+        <input id="phone" type="tel" placeholder="+996 ___ __ __ __">
+        <label>Дарек</label>
+        <textarea id="addr" rows="2" placeholder="Көчө, үй, батир"></textarea>
+
+        <div class="pay">
+          <label>MBank аркылуу төлөө (QR код)</label>
+          <div class="qr">Бул жерге кафенин MBank KR коду коюлат</div>
+          <small>Төлөп, чекти заказдан кийин көрсөтүңүз</small>
+        </div>
+
+        <p class="err" id="err"></p>
+        <button class="cta" style="width:100%;margin-top:12px" onclick="send()">Заказды жиберүү</button>
+      </div>
+
+      <div class="ok" id="ok">
+        <div class="icon">✅</div>
+        <h3>Рахмат! Заказ кабыл алынды</h3>
+        <p>Жакында сизге чалабыз.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>Шорпо Центр · Тел: +996 998 003 480· Күн сайын 09:00–22:00</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
